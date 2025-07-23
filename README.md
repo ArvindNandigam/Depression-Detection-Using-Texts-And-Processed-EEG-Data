@@ -1,28 +1,69 @@
 # Depression-Detection-Using-Texts-And-Processed-EEG-Data
-This repository contains a multimodal deep learning framework that integrates social media text analysis and clinical EEG signals to detect signs of depression. By combining Natural Language Processing (NLP) and neural signal analysis, this approach aims to improve early detection accuracy and enhance interpretability in mental health applications.
 
-Key Features
-Text-Based Detection: Uses pre-trained BERT with CNN layers and self-attention to identify depressive cues from Reddit and mental health corpora.
-EEG-Based Detection: Deep Neural Network trained on clinical EEG data to classify depressive disorders using neurophysiological patterns.
-Multimodal Integration:
-Ensemble strategies (soft/hard voting)
-Cross-modal probability calibration
-EEG duplication and text sampling for alignment
-Comprehensive Evaluation: Accuracy measured across multiple fusion strategies with experimental variations and visual analytics.
-Datasets Used
-Reddit Depression Dataset (Kaggle)
-Mental Health Text Corpus (Kaggle)
-EEG Psychiatric Disorders Dataset (Kaggle)
-Architecture Highlights
-BERT + CNN + Multihead Attention for text
-Fully Connected Layers for EEG
-Decision-level ensemble with various normalization and sampling strategies
-Trained using PyTorch and Hugging Face Transformers
-Technologies
-PyTorch, Transformers (HuggingFace), scikit-learn
-StandardScaler, AdamW, cosine annealing scheduler
-EEG feature engineering and dropout-based regularization
-Results
-Text-only model: High accuracy and contextual understanding
-EEG-only model: Robust neurophysiological signal classification
-Best Ensemble: Hard voting with random BERT sampling reached ~77.25% accuracy
+This repository presents a **multimodal deep learning framework** that integrates **social media text analysis** with **clinical EEG signal processing** to detect signs of **depression**. By combining Natural Language Processing (NLP) with neural signal analysis, the system enhances the accuracy and interpretability of early depression detection, making it a valuable tool in modern mental health diagnostics.
+
+## Key Features
+
+- **Text-Based Detection**  
+  Utilizes a pre-trained BERT model enhanced with CNN layers and multi-head self-attention to extract depressive cues from Reddit posts and mental health corpora.
+
+- **EEG-Based Detection**  
+  Employs a deep neural network trained on processed EEG signals to identify neurophysiological patterns indicative of depressive disorders.
+
+- **Multimodal Integration**  
+  - Ensemble strategies: Soft and hard voting mechanisms  
+  - Cross-modal probability calibration  
+  - EEG duplication and text sampling for data alignment
+
+- **Comprehensive Evaluation**  
+  - Accuracy assessment across multiple fusion strategies  
+  - Experimental analysis of fusion techniques  
+  - Visual analytics for model behavior and interpretability
+
+## Datasets Used
+
+- Reddit Depression Dataset (Kaggle)  
+- Mental Health Text Corpus (Kaggle)  
+- EEG Psychiatric Disorders Dataset (Kaggle)
+
+All datasets are preprocessed for training and evaluation.
+
+## Architecture Overview
+
+### Text Processing
+
+- BERT (Hugging Face Transformers)  
+- Convolutional Neural Networks (CNN)  
+- Multi-Head Self-Attention  
+
+### EEG Processing
+
+- EEG feature engineering  
+- Fully Connected Deep Neural Network (DNN)  
+- Dropout-based regularization  
+
+### Multimodal Fusion
+
+- Decision-level ensembling  
+- Cross-modal normalization  
+- Data duplication and sampling alignment  
+
+## Technologies and Libraries
+
+- PyTorch  
+- Hugging Face Transformers  
+- scikit-learn  
+- StandardScaler  
+- AdamW optimizer  
+- Cosine Annealing Learning Rate Scheduler  
+
+## Results Summary
+
+- **Text-Only Model**  
+  Achieved high accuracy with contextual understanding of depressive language.
+
+- **EEG-Only Model**  
+  Demonstrated robust performance in classifying EEG patterns related to depression.
+
+- **Multimodal Ensemble**  
+  Outperformed unimodal models using decision-level fusion and calibration strategies.
